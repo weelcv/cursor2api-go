@@ -70,7 +70,7 @@ PORT=8002
 DEBUG=true
 
 # API配置
-API_KEY=0000
+API_KEY=sk123456789
 MODELS=gpt-5,gpt-5-codex,gpt-5-mini,gpt-5-nano,gpt-4.1,gpt-4o,claude-3.5-sonnet,claude-3.5-haiku,claude-3.7-sonnet,claude-4-sonnet,claude-4.5-sonnet,claude-4-opus,claude-4.1-opus,gemini-2.5-pro,gemini-2.5-flash,o3,o4-mini,deepseek-r1,deepseek-v3.1,kimi-k2-instruct,grok-3,grok-3-mini,grok-4,code-supernova-1-million
 SYSTEM_PROMPT_INJECT=
 
@@ -107,7 +107,7 @@ build_app() {
 show_info() {
     # 获取配置信息
     PORT=$(grep -E '^PORT=' .env 2>/dev/null | cut -d'=' -f2 | tr -d ' ' || echo "8002")
-    API_KEY=$(grep -E '^API_KEY=' .env 2>/dev/null | cut -d'=' -f2 | tr -d ' ' || echo "0000")
+    API_KEY=$(grep -E '^API_KEY=' .env 2>/dev/null | cut -d'=' -f2 | tr -d ' ' || echo "sk123456789")
 
     echo ""
     echo -e "${PURPLE}🚀 服务启动信息:${NC}"
